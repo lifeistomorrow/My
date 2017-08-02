@@ -1,0 +1,15 @@
+（1）Activity把值传递给Fragment：
+    （1.1）第一种方式，也是最常用的方式，就是使用Bundle来传递参数
+    （1.2）在宿主Activity中暴露一个公共的方法供Fragment使用
+    （1.3）static MyFragment newInstance(String s){
+            MyFragment myFragment = new MyFragment();
+            Bundle bundle = new Bundle();
+            bundle.putString("DATA",s);
+            myFragment.setArguments(bundle);
+            return myFragment;
+          }
+（2）Fragment把值传递给Activity：
+    （2.1）在Fragment中写个接口，宿主Activity实现这个接口
+（3）Fragment与Fragment之间的传值：
+    （3.1）在activity中暴露出来一个方法，在Fragment中通过((XXActivity)getActivity()).getXX()获得;
+    （3.2）在Activity中通过findFragmentByTab或ID来找到对应的fragment。
