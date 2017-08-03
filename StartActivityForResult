@@ -1,0 +1,5 @@
+在调用startActivityForResult()方法之前，先调用resolveActivity()，
+这个方法会返回能处理该Intent的第一个Activity
+（译注：即检查有没有能处理这个Intent的Activity）。
+执行这个检查非常重要，因为如果在调用startActivityForResult()时，没有应用能处理你的Intent，应用将会崩溃。
+所以只要返回结果不为null，使用该Intent就是安全的。
