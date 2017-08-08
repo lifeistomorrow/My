@@ -1,0 +1,31 @@
+//View的内容相对于View在水平方向上的偏移量，以像素为单位  
+//当mScrollX为正数时，内容相对于View从右向左移动，反之则向从左向右移动  
+protected int mScrollX;  
+  
+//View的内容相对于View在垂直方向上的偏移量，以像素为单位  
+//当mScrollY为负数时，内容相对于View从下向上移动，反之则向从上向下移动  
+protected int mScrollY;  
+
+//获取内容偏移量mScrollX的值  
+int android.view.View.getScrollX()  
+  
+//获取内容偏移量mScrollY的值  
+int android.view.View.getScrollY()  
+  
+//设置内容偏移量mScrollX的值，此方法引发View重新调整内容的位置并重绘  
+//相当于调用scrollTo(value,mScrollY)  
+void android.view.View.setScrollX(int value)  
+  
+//设置内容偏移量mScrollY的值，此方法引发View重新调整内容的位置并重绘  
+//相当于调用scrollTo(mScrollX,value)  
+void android.view.View.setScrollY(int value)  
+  
+//将View的内容移动到参数所指定的位置中，此时mScrollX=x，mScrollY=y。  
+//此方法引发View重新调整内容的位置并重绘  
+void android.view.View.scrollTo(int x, int y)  
+  
+//设置View内容移动的增量，相当于调用scrollTo(mScroll+x, mScroll+y);  
+//此方法引发View重新调整内容的位置并重绘  
+void android.view.View.scrollBy(int x, int y)  
+
+link to http://blog.csdn.net/eieihihi/article/details/45668189
