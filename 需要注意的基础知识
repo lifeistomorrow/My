@@ -1,0 +1,8 @@
+<-Intent-Filter->
+1、Action、category:Intent的action代表该intent所要完成的一个抽象动作，category为action增加额外的附加类别信息。通常结合使用。一个intent对象最多
+只能包括一个action属性，setAction来设置，但可以包括多个category属性，addCategory来添加，默认启动的category属性为Intent.CATEGORY_DEFAULT的组件
+
+2、Data属性通常用于向action属性提供操作的数据，接受一个Uri对象。DataUri字符串满足如下格式：scheme://host:port/path
+
+<--- 资源 --->
+1、为listview指定数据源 android:entries = "@array/xx"
